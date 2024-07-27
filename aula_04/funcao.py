@@ -1,6 +1,6 @@
-lista_de_numeros = [100, 50, 60]
+# lista_de_numeros = [100, 50, 60]
 
-lista_de_numeros.sort()
+# lista_de_numeros.sort()
 
 
 def ordenar_lista_de_numeros(numeros):
@@ -14,8 +14,8 @@ def ordenar_lista_de_numeros(numeros):
     return print(nova_lista_de_numeros)
 
 
-ordenar_lista_de_numeros(lista_de_numeros)
+# ordenar_lista_de_numeros(lista_de_numeros)
 
-lista_de_numeros.sort()
+# lista_de_numeros.sort()
 
-print(lista_de_numeros)
+# print(lista_de_numeros)
