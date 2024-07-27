@@ -34,7 +34,7 @@ dicionario = {
     "Ano": 2024
 }
 
-for n,m in enumerate (dicionario):
+for n, m in enumerate (dicionario):
     print(f"{m}: {dicionario[m]}") 
 """
 
