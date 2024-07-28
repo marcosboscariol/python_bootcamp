@@ -112,6 +112,7 @@ print(dicionario.keys())
 
 # Contagem de Frequência de Itens: Objetivo: Dada uma string, contar a frequência de cada caractere usando um dicionário.
 
+"""
 texto = "engenharia de dados"
 frequencia = {}
 
@@ -122,3 +123,58 @@ for caractere in texto:
         frequencia[caractere] = 1
 
 print(frequencia)
+"""
+
+# Escreva uma função que receba uma lista de números e retorne a soma de todos os números.
+
+"""
+def soma_lista(lista):
+
+    soma = 0
+
+    for numero in lista:
+        soma = soma + numero
+
+    print(soma)
+
+
+soma_lista([1, 2, 3, 4, 5])
+"""
+
+# Crie uma função que receba um número como argumento e retorne True se o número for primo e False caso contrário.
+
+"""
+def e_primo(numero):
+
+    primo = False
+    if numero > 1:
+        for i in range(1, numero):
+            if numero % 1 == 0:
+                primo = True
+            else:
+                primo = False
+                break
+    else:
+        primo = False
+    print(primo)
+
+
+e_primo(22)
+"""
+
+# Desenvolva uma função que receba uma string como argumento e retorne essa string revertida.
+
+"""
+def frase_invertida(frase):
+
+    frase_lista = (list(frase))
+
+    frase_lista.reverse()
+
+    print(frase_lista)
+
+
+frase_invertida("Meu nome é Marcos")
+"""
+
+#
