@@ -16,6 +16,15 @@ def calcular_kpi_total_de_vendas(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-pasta_argumento = 'aula_08\data'
+def carregar_dados(df: pd.DataFrame, formato_saida: list):
+    for formato in formato_saida:
+        if formato in formato_saida == 'csv':
+            df.to_csv('dados.csv')
+        if formato in formato_saida == 'parquet':
+            df.to_csv('dados.parquet')
+
+
+pasta_argumento = 'aula_08\\data'
 data_frame = extrair_dados_e_consolidar(pasta=pasta_argumento)
-print(calcular_kpi_total_de_vendas(data_frame))
+data_frame_calculado = (calcular_kpi_total_de_vendas(data_frame))
+carregar_dados(data_frame_calculado, 'parquet')
