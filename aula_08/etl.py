@@ -24,7 +24,7 @@ def carregar_dados(df: pd.DataFrame, formato_saida: list):
             df.to_csv('dados.parquet')
 
 
-pasta_argumento = 'aula_08\\data'
-data_frame = extrair_dados_e_consolidar(pasta=pasta_argumento)
-data_frame_calculado = (calcular_kpi_total_de_vendas(data_frame))
-carregar_dados(data_frame_calculado, 'parquet')
+def pipeline_calcular_kpi_vendas_consolidado(pasta: str, formato_saida: list):
+    data_frame = extrair_dados_e_consolidar(pasta)
+    data_frame_calculado = (calcular_kpi_total_de_vendas(data_frame))
+    carregar_dados(data_frame_calculado, formato_saida)
