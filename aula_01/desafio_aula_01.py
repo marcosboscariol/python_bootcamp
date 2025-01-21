@@ -14,7 +14,9 @@ bonus_usuario = input('Digite a porcentagem do bônus recebido: ')
 bonus_usuario_float = float(bonus_usuario)
 
 # 4) Calcule o valor do bônus final
-bonus_final = 1000 + (bonus_usuario_float/100) * salario_usuario_float
+CONSTANTE_BONUS = 1000
+bonus_final = CONSTANTE_BONUS + \
+    (bonus_usuario_float/100) * salario_usuario_float
 
 # 5) Imprime a mensagem personalizada incluindo o nome do usuário, salário e bônus
 print(f'O nome do usuário é {nome_usuario}')
