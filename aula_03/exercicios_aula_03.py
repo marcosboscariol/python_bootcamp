@@ -164,20 +164,94 @@ print(numeros_normalizados)
 # Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
 
+'''
+usuarios = [
+    {
+        'id_usuario': 1,
+        'nome': 'Marcos',
+        'email': 'aaa@aaa'
+    },
+    {
+        'id_usuario': 2,
+        'nome': '',
+        'email': 'aaa@aaa'
+    }
+]
+
+for usuario in usuarios:
+    for chave in usuario:
+        if (usuario[chave]) == '':
+            print(usuario, chave)
+'''
 
 # Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
 
+'''
+numeros = [1, 2, 3, 4, 5]
+
+numeros_pares = []
+
+for numero in numeros:
+    if numero % 2 == 0:
+        numeros_pares.append(numero)
+
+print(numeros_pares)
+'''
+
 # Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
+
+'''
+vendas = [
+    {
+        'categoria': 1,
+        'valor': 10
+    },
+    {
+        'categoria': 1,
+        'valor': 20
+    }
+]
+
+vendas_categoria = 0
+
+for venda in vendas:
+    if venda['categoria'] == 1:
+        vendas_categoria = vendas_categoria + venda['valor']
+
+print(vendas_categoria)
+'''
 
 # Exercícios com WHILE
 
 # Exercício 11. Leitura de Dados até Flag
 # Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
 
+'''
+while True:
+    input_usuario = input('Digite algo ou aperte "S" para sair: ')
+    if input_usuario == 'S':
+        break
+'''
+
+
 # Exercício 12. Validação de Entrada
 # Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
+
+'''
+while True:
+    numero_usuario = input('Digite um número inteiro entre 1 e 10: ')
+    try:
+        numero_usuario_int = int(numero_usuario)
+
+        if int(numero_usuario) <= 10 and int(numero_usuario) >= 0:
+            break
+        else:
+            print('Valor inválido')
+    except ValueError:
+        print('Valor inválido')
+'''
 
 # Exercício 13. Consumo de API Simulado
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
@@ -185,5 +259,30 @@ print(numeros_normalizados)
 # Exercício 14. Tentativas de Conexão
 # Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
 
+'''
+maximo_tentativas = 5
+
+tentativas = 0
+
+conexao_disponivel = False
+
+while conexao_disponivel == False and tentativas < maximo_tentativas:
+    tentativas += 1
+    print(f'Falha de conexão, tentativa {
+          tentativas}, com um limite de {maximo_tentativas}')
+'''
+
 # Exercício 15. Processamento de Dados com Condição de Parada
 # Processar itens de uma lista até encontrar um valor específico que indica a parada.
+
+
+lista = [1, 2, 3, 4, 5]
+
+item_a_ser_encontrado = 5
+
+'''
+for numero in lista:
+    if numero == item_a_ser_encontrado:
+        print(numero)
+        break
+'''
