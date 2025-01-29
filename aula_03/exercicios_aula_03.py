@@ -131,11 +131,39 @@ else:
 # Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
 
+'''
+palavra = 'banana'
+
+palavra_list = list(palavra)
+
+contagem = {}
+
+for letra in palavra_list:
+    if letra in contagem:
+        contagem[letra] += 1
+    else:
+        contagem[letra] = 1
+
+print(contagem)
+'''
+
 # Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
 
+'''
+numeros = [1, 2, 5, 10]
+
+numeros_normalizados = []
+
+for numero in numeros:
+    numeros_normalizados.append(numero/max(numeros))
+
+print(numeros_normalizados)
+'''
+
 # Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
+
 
 # Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
