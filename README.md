@@ -1,3 +1,3 @@
 # python_bootcamp
 
-Repo for PYthon Bootcamp
+Repo for Python Bootcamp
